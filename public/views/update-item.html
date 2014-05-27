@@ -1,0 +1,9 @@
+<div name="existingInvItem">
+	<label type="text">Edit Inventory</label>
+	<input type="text" ng-model="item.type" value="{{item.type}}"> 
+	<input type="text" ng-model="item.name" value="{{item.name}}">
+	<textarea ng-model="item.description">{{item.description}}</textarea>
+	<input type="text" ng-model="item.imagesUrl" ng-class="invimages" placeholder="Attach images">
+	<button class="btn-default btn-default-xs" ng-click="editItem()">Update Product</button>
+	<a class="btn-default btn-default-xs" href="#/inventory">View Inventory</a>
+</div>
