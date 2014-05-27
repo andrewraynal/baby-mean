@@ -7,7 +7,7 @@ angular.module('angularstoreApp')
       'AngularJS',
       'Karma'
     ];
-  });
+  })
 
   .controller('ItemsCtrl', function ($scope, $location, ItemsSvc) {
     
