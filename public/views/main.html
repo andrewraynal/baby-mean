@@ -1,14 +1,25 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#/blog">Blog</a></li>
-   
-  </ul>
-  <h3 class="text-muted">baby-mean</h3>
-</div>
-
+<h3 class="text-muted">I'm Board!</h3>
 <div class="jumbotron">
-  <h1>Welcome to baby-mean</h1>
-  <p><a class="btn btn-lg btn-success" ng-href="#/blog">Go to blog!</a></p>
-</div>
+  <h1>The Board Shop</h1>
+  <p class="lead">
+  <img src="images/home.jpeg" alt="I'm Board."><br>
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/shop">Shop<span class="glyphicon glyphicon-ok"></span></a></p>
 
+  <div class="footer" ng-controller="MainCtrl">
+  <ul class="nav nav-pills">
+    <li ng-class="{active: nav.isSelected(0)}"> 
+      <a class="btn btn-lg btn-success" ng-href="#/" ng-click="nav.selectNav(0)">Home</a> 
+    </li>
+    <li ng-class="{active: nav.isSelected(1)}"> 
+      <a class="btn btn-lg btn-success" ng-href="#/about" ng-click="nav.selectNav(1)">About</a> 
+    </li>
+    <li ng-class="{active: nav.isSelected(2)}"> 
+      <a class="btn btn-lg btn-success" ng-href="#/contact" ng-click="nav.selectNav(2)">Contact</a> 
+    </li>
+    <li ng-class="{active: nav.isSelected(3)}"> 
+      <a class="btn btn-lg btn-success" ng-href="#/inventory" ng-click="nav.selectNav(3)">Inventory</a> 
+    </li>
+  </ul>
+</div>
+</div>

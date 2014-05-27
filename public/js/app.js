@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('ngDay2App', [
+  .module('angularstoreApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -10,24 +10,26 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html'
-      })
-      .when('/blog', {
-        templateUrl: 'views/blog-list.html',
-        controller: 'PostsCtrl'
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
       })
       .when('/new', {
-        templateUrl: 'views/blog-create.html',
-        controller: 'PostsCtrl'
+        templateUrl: 'views/create-item.html',
+        controller: 'ItemsCtrl'
       })
-      .when('/blog/:id', {
-        templateUrl: 'views/blog-detail.html',
-        controller: 'PostCtrl'
+      .when('/inventory/:id/edit', {
+        templateUrl: 'views/update-item.html',
+        controller: 'ItemCtrl'
       })
-      .when('/blog/:id/edit', {
-        templateUrl: 'views/blog-editDetail.html',
-        controller: 'PostCtrl'
+        .when('/inventory/:id', {
+        templateUrl: 'views/item-details.html',
+        controller: 'ItemCtrl'
       })
+        .when('/inventory', {
+        templateUrl: 'views/inventory.html',
+        controller: 'ItemsCtrl'
+      })
+
       .otherwise({
         redirectTo: '/'
       });
