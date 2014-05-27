@@ -1,6 +1,6 @@
 angular.module('angularstoreApp')
 	.factory('ItemsSvc', function($resource) {
-		return $resource('api/collections/BoardShop', {},
+		return $resource('api/collections/BoardStore', {},
 			{
 				query: {
 						method: 'GET',
