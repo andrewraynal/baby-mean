@@ -1,6 +1,6 @@
 angular.module('angularstoreApp')
 	.factory('ItemSvc', function($resource) {
-		return $resource('api/collections/BoardStore:id',
+		return $resource('api/collections/BoardShop:id',
 			{
 				id: '@_id'
 			},
@@ -10,4 +10,3 @@ angular.module('angularstoreApp')
 				deleteItem: { method: 'DELETE'	}
 			});
 	});
-			

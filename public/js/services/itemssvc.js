@@ -1,6 +1,6 @@
 angular.module('angularstoreApp')
 	.factory('ItemsSvc', function($resource) {
-		return $resource('api/collections/BoardStore', {},
+		return $resource('api/collections/BoardShop', {},
 			{
 				query: {
 						method: 'GET',
@@ -11,4 +11,4 @@ angular.module('angularstoreApp')
 				}
 			});
 	});
-		
+			
