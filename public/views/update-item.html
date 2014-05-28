@@ -2,6 +2,7 @@
 	<label type="text">Edit Inventory</label>
 	<input type="text" ng-model="item.type" value="{{item.type}}"> 
 	<input type="text" ng-model="item.name" value="{{item.name}}">
+	<input type="text" ng-model="item.price" value="{{item.price}}">
 	<textarea ng-model="item.description">{{item.description}}</textarea>
 	<input type="file" ng-model="item.images" ng-class="invimages" placeholder="Attach images">
 	<button class="btn-default btn-default-xs" ng-click="editItem()">Update Product</button>
