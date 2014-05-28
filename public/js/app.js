@@ -7,7 +7,7 @@ angular
     'ngSanitize',
     'ngRoute',
     'ui.bootstrap',
-    'qtyNg.directives'
+    'costNg.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -33,18 +33,18 @@ angular
       })
         .when('/cart', {
         templateUrl: 'views/cart.html',
-        controller: 'CartItemsCtrl'
-      })
-        .when('/cart/:id', {
-        templateUrl: 'views/cart-detail.html',
         controller: 'CartItemCtrl'
       })
-        .when('/cart/:id/edit', {
-        templateUrl: 'views/cart-edit.html',
-        controller: 'CartItemCtrl'
-      })  
+      // //   .when('/cart/:id', {
+      // //   templateUrl: 'views/cart-detail.html',
+      // //   controller: 'CartItemCtrl'
+      // // })
+      // //   .when('/cart/:id/edit', {
+      // //   templateUrl: 'views/cart-edit.html',
+      // //   controller: 'CartItemCtrl'
+      // })  
         .otherwise({
         redirectTo: '/'
   });
 });
-angular.module('qtyNg.directives', []);
+angular.module('costNg.directives', []);

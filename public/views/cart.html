@@ -1,31 +1,18 @@
 <div class="wrapper">
-<div class="nav">
-<h1>Checkout</h1>
-<h2>Please review the items in your shopping cart and continue to checkout.</h2>
-<ul class="nav nav-pills pull-right">
-    <li><a ng-href="#">Home</a></li>
-    <li><a ng-href="#/about">About</a></li>
-    <li><a ng-href="#/shop">Shop</a></li>
-    <li class="active"><a ng-href="#/cart">Shopping Cart</a></li>
-    <li><a ng-href="#/contact">Contact</a></li>
-</ul>
+	<div class="nav">
+	<h1>Checkout</h1>
+		<ul class="nav nav-pills pull-right">
+    		<li><a ng-href="#">Home</a></li>
+    		<li><a ng-href="#/about">About</a></li>
+    		<li><a ng-href="#/shop">Shop</a></li>
+    		<li class="active"><a ng-href="#/cart">Shopping Cart</a></li>
+    		<li><a ng-href="#/contact">Contact</a></li>
+		</ul>
+	</div>
+	<div class="purchases">
+		<cost-directive></cost-directive>
 </div>
-<div class="purchases">
-    <div ng-repeat="item in items">
-      <ul>
-        <li>{{item.name}}({{item.type}}</li>
-        <li><img ng-src="{{item.thumb}}"></img></li>
-        <li><button ng-click="removeCartItem($index)" class="btn btn-sm btn-warning pull-right">Remove from Cart</button></li>
-        <li>{{item.price | currency: symbol}}</li>
-      </ul>
-    </div>
-  </div>
-  <div class="dolladollabills">
-  <p class="subtotal">Subtotal: {{item.qty*item.price | currency: symbol}}</p>
-  <p class="shipping">Shipping & Handling: {{item.shipping | currency: symbol}}</p>
-  <p class="total">Total Amount Due: {{item.subtotal+item.shipping | currency: symbol}}</p>
-  </div>
 <footer>
-  <a ng-href="#/shop"><button class="btn btn-lg btn-success pull-right">Back to the shop</button></a>
+	<a ng-href="#/shop"><button class="btn btn-lg btn-success pull-right">Check Out</button></a> | <a ng-href="#/shop"><button class="btn btn-lg btn-success pull-right">More Shopping</button></a>
 </footer>
 </div>

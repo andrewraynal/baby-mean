@@ -40,8 +40,13 @@ angular.module('angularstoreApp')
       CartItemSvc.delete({ id: $routeParams.id });
       $location.path('/cart');
     };
-    $scope.editQty = function() {
-      CartItemSvc.editQty($scope.item);
-      $location.path('/cart');
-    };
+    $scope.totalCost = function() {
+        var totalCoast = 0;
+        angular.forEach($scope.item, function(item) {
+            totalCost += item.qty * item.price;
+        })
+
+        return totalCost;
+    	}
+	}
   });

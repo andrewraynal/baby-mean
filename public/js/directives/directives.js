@@ -1,8 +1,8 @@
-angular.module('qtyNg.directives')
-	.directive('qtyDirective', function(){
+angular.module('costNg.directives')
+	.directive('costDirective', function(){
 		return{
 			restrict:'E',
 			scope: true,
-			templateUrl: 'views/qtydirect.html'
+			templateUrl: 'views/costdirect.html'
 		}
 	});	
