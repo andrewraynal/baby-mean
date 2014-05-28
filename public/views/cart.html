@@ -3,24 +3,25 @@
 <h1>Checkout</h1>
 <h2>Please review the items in your shopping cart and continue to checkout.</h2>
 <ul class="nav nav-pills pull-right">
-    	<li><a ng-href="#/">Home</a></li>
-    	<li><a ng-href="#/shop">Shop</a></li>
-    	<li class="active"><a ng-href="#/cart">Cart</a></li>
-    </ul>
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="#/about">About</a></li>
+    <li><a ng-href="#/shop">Shop</a></li>
+    <li class="active"><a ng-href="#/cart">Shopping Cart</a></li>
+    <li><a ng-href="#/contact">Contact</a></li>
+</ul>
 </div>
 <div class="purchases">
     <div ng-repeat="item in items">
       <ul>
-        <li>{{item.type}}</li>
-        <li>{{item.name}}</li>
+        <li>{{item.name}}({{item.type}}</li>
         <li><img ng-src="{{item.thumb}}"></img></li>
-        <li><button ng-click="removeItem($index)" class="btn btn-sm btn-warning pull-right">Remove</button></li>
-        <li>{{item.price | currency}}</li>
+        <li><button ng-click="removeCartItem($index)" class="btn btn-sm btn-warning pull-right">Remove from Cart</button></li>
+        <li>{{item.price | currency: symbol}}</li>
       </ul>
     </div>
   </div>
   <div class="dolladollabills">
-  <p class="total">Total: {{total}}</p>
+  <p class="total">Total: {{items.total | currency: symbol}}</p>
   </div>
 <footer>
   <a ng-href="#/shop"><button class="btn btn-lg btn-success pull-right">Back to the shop</button></a>

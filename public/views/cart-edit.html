@@ -1,0 +1,20 @@
+<div class="wrapper">
+<div class="header">
+  <h2>Update Cart Item</h2>
+</div>
+<div class="nav">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="#/about">About</a></li>
+    <li><a ng-href="#/shop">Shop</a></li>
+    <li class="active"><a ng-href="#/cart">Shopping Cart</a></li>
+    <li><a ng-href="#/contact">Contact</a></li>
+  </ul>
+</div>
+<div class="col-md-12">
+<input type="text" data-ng-model="item.type" value="{{item.type}}">
+<input type="text" data-ng-model="item.name" value="{{item.name}}">
+<input type="text" data-ng-model="item.quantity" value="{{item.quantity}}">
+<button data-ng-click="editCartItem()">Change/Remove Product</button>
+</div>
+</div>

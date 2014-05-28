@@ -30,10 +30,17 @@ angular
         controller: 'ItemsCtrl'
       })
         .when('/cart', {
-        templateUrl: 'views/cart-items.html',
+        templateUrl: 'views/cart.html',
         controller: 'CartItemsCtrl'
       })
-      .otherwise({
+        .when('/cart/:id', {
+        templateUrl: 'views/cart-detail.html',
+        controller: 'CartItemCtrl'
+      })
+        .when('/cart/:id/edit', {
+        templateUrl: 'views/cart-edit.html',
+        controller: 'CartItemCtrl'
+      })  
+        .otherwise({
         redirectTo: '/'
-      });
   });

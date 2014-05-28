@@ -1,0 +1,12 @@
+<div class="jumbotron">
+<button class="btn btn-xs btn-success additembtn" ng-click="addShopItem()">Create New Product</button>
+  <h1>Inventory</h1>
+  <h2>Boards</h2>
+  <div class="shopitem" data-ng-repeat="item in items">
+    <h3>{{item.type}}</h3>
+    <h4>{{item.name}}</h4>
+    <p>{{item.images}}</p>
+    <p>{{item.description}}</p>
+    <p><a href="#/shop/{{item._id}}">Update Product</a></p>
+  </div>
+</div>

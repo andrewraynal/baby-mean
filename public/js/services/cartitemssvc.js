@@ -1,6 +1,6 @@
 angular.module('angularstoreApp')
-	.factory('ItemsSvc', function($resource) {
-		return $resource('api/collections/BoardInventory', {},
+	.factory('CartItemsSvc', function($resource) {
+		return $resource('api/collections/BoardShop', {},
 			{
 				query: {
 						method: 'GET',
