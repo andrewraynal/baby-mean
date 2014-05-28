@@ -21,7 +21,9 @@
     </div>
   </div>
   <div class="dolladollabills">
-  <p class="total">Total: {{items.total | currency: symbol}}</p>
+  <p class="subtotal">Subtotal: {{item.qty*item.price | currency: symbol}}</p>
+  <p class="shipping">Shipping & Handling: {{item.shipping | currency: symbol}}</p>
+  <p class="total">Total Amount Due: {{item.subtotal+item.shipping | currency: symbol}}</p>
   </div>
 <footer>
   <a ng-href="#/shop"><button class="btn btn-lg btn-success pull-right">Back to the shop</button></a>

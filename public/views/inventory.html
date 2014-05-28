@@ -6,7 +6,9 @@
     <h1>{{item.type}}</h1>
     <h2>{{item.name}}</h2>
     <p>{{item.description}}</p>
-    <p>{{item.images}}</p>
+    <p><img ng-src="{{item.smimg}}"></p>
+    <p><img ng-src="{{item.mdimg}}"></p>
+    <p><img ng-src="{{item.lgimg}}"></p>
     <p><a href="#/inventory/{{item._id}}">Update Product</a></p>
   </article>
 </div>

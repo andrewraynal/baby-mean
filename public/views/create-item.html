@@ -3,7 +3,9 @@
 	<input type="text" data-ng-model="item.type" placeholder="Type"> 
 	<input type="text" data-ng-model="item.name" placeholder="Name">
 	<textarea data-ng-model="item.description" placeholder="Enter a description..."></textarea>
-	<input type="file" data-ng-model="item.images" placeholder="Attach image">
+	<input type="text" data-ng-model="item.smimg" value="{{item.smimg}}">
+	<input type="text" data-ng-model="item.mdimg" value="{{item.mdimg}}">
+	<input type="text" data-ng-model="item.lgimg" value="{{item.lgimg}}">
 	<button class="btn-default btn-default-xs" data-ng-click="newItem(item)">Add Product to Inventory</button>
 	<a class="btn-default btn-default-xs" href="#/inventory">View Inventory</a>
 </form>

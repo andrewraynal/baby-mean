@@ -5,7 +5,9 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap',
+    'qtyNg.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -44,3 +46,5 @@ angular
         .otherwise({
         redirectTo: '/'
   });
+});
+angular.module('qtyNg.directives', []);
