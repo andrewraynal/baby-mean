@@ -10,7 +10,7 @@ angular.module('costNg.directives')
         				var totalCost = 0;
         				cartItems.forEach($scope.item, function(item) {
             			totalCost += item.qty * item.price;
-        		});
+        		})
 			}
 		}
 	}	
