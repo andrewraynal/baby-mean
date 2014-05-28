@@ -41,12 +41,11 @@ angular.module('angularstoreApp')
       $location.path('/cart');
     };
     $scope.totalCost = function() {
-        var totalCoast = 0;
+        var totalCost = 0;
         angular.forEach($scope.item, function(item) {
             totalCost += item.qty * item.price;
         })
 
         return totalCost;
-    	}
 	}
   });
