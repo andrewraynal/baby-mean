@@ -33,7 +33,6 @@ angular.module('angularstoreApp')
     };
     $scope.items = CartItemsSvc.query();
   })
-
   .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc) {
     $scope.item = CartItemSvc.showCartItem({ id: $routeParams.id });
     $scope.deleteCartItem = function() { 
@@ -41,6 +40,7 @@ angular.module('angularstoreApp')
       $location.path('/cart');
     };
     $scope.editCartItem = function() { 
-      CartItemSvc.editCartItem({ id: $routeParams.id });
+      CartItemSvc.editCartItem($scope.item);
       $location.path('/cart');
+    };
   })
