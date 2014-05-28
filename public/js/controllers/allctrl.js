@@ -23,7 +23,7 @@ angular.module('angularstoreApp')
 			$location.path('/inventory');
 		};
 	})
-	.controller('CartItemsCtrl', function ($scope, $location, $routeParams, CartItemsSvc) {
+	.controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc) {
     $scope.addCartItem = function(item) {
       $location.path('/shop');
     };
@@ -34,7 +34,7 @@ angular.module('angularstoreApp')
     $scope.items = CartItemsSvc.query();
   })
 
-  .controller('CartItemCtrl', function($scope, $location, $routeParams, CartItemSvc) {
+  .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc) {
     $scope.item = CartItemSvc.showCartItem({ id: $routeParams.id });
     $scope.deleteCartItem = function() { 
       CartItemSvc.delete({ id: $routeParams.id });
@@ -42,5 +42,5 @@ angular.module('angularstoreApp')
     };
     $scope.editCartItem = function() { 
       CartItemSvc.editCartItem({ id: $routeParams.id });
-      $location.path('/cart/:id');
-  });
+      $location.path('/cart');
+  })
