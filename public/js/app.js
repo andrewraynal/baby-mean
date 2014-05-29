@@ -5,8 +5,7 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute',
-    'ui.bootstrap',
+    'ngRoute'
 
   ])
   .config(function ($routeProvider) {
@@ -31,7 +30,10 @@ angular
         templateUrl: 'views/inventory.html',
         controller: 'ItemsCtrl'
       })
-
+        .when('/newcartitem', {
+        templateUrl: 'views/cart.html',
+        controller: 'CartItemsCtrl'
+      })
         .when('/cart', {
         templateUrl: 'views/cart.html',
         controller: 'CartItemsCtrl'
