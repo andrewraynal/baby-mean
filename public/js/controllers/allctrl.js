@@ -24,23 +24,23 @@ angular.module('angularstoreApp')
 		};
 	})
 	.controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc) {
-    $scope.addCartItem = function(item) {
+    $scope.createCartItem = function() {
       $location.path('/cart');
     };
-    $scope.newCartItem = function(item) {
+    $scope.newCartItem = function(cartitem) {
       CartItemsSvc.create(item);
       $location.path('/cart');
     };
-    $scope.items = CartItemsSvc.query();
+    $scope.cartitems = CartItemsSvc.query();
   })
   .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc) {
-    $scope.item = CartItemSvc.showCartItem({ id: $routeParams.id });
+    $scope.cartitem = CartItemSvc.showCartItem({ id: $routeParams.id });
     $scope.deleteCartItem = function() { 
       CartItemSvc.delete({ id: $routeParams.id });
       $location.path('/cart');
     };
     $scope.editCartItem = function() { 
-      CartItemSvc.editCartItem($scope.item);
+      CartItemSvc.editCartItem($scope.cartitem);
       $location.path('/cart');
     };
   })

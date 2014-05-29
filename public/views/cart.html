@@ -19,14 +19,14 @@
             <th>Total</th>
             <th></th>
         </tr>
-        <tr ng-repeat="item in items">
+        <tr ng-repeat="cartitem in cartitems">
             <td><input type="text" ng-model="item.type" class="input-small"></td>           
             <td><input type="text" ng-model="item.name" class="input-small"></td>           
             <td><input type="number" ng-model="item.qty" class="input-mini"></td>
             <td><input type="number" ng-model="item.price" class="input-mini"></td>
             <td>{{item.qty * item.price | currency | symbol}}</td>
             <td>
-                <button class="btn-warning btn-warning-xs" ng-click="removeCartItem($index)"><strong>REMOVE</strong></button>
+                <button class="btn-warning btn-warning-xs" ng-click="deleteCartItem()"><strong>REMOVE</strong></button>
             </td>
         </tr>
     </table>
