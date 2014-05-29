@@ -25,7 +25,7 @@ angular.module('angularstoreApp')
 	})
 	.controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc) {
     $scope.addCartItem = function(item) {
-      $location.path('/shop');
+      $location.path('/cart');
     };
     $scope.newCartItem = function(item) {
       CartItemsSvc.create(item);

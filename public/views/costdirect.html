@@ -13,9 +13,9 @@
             <td><input type="text" ng-model="item.name" class="input-small"></td>           
             <td><input type="number" ng-model="item.qty" class="input-mini"></td>
             <td><input type="number" ng-model="item.price" class="input-mini"></td>
-            <td>{{item.qty * item.price | currency | symbol}}</td>
+            <td>Total = {{item.qty * item.price | currency | symbol}}</td>
             <td>
-                [<a href ng-click="removeCartItem($index)"><strong>REMOVE</strong></a>]
+                <button ng-click="removeCartItem($index)"><strong>REMOVE</strong></button>
             </td>
         </tr>
     </table>

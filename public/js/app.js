@@ -7,7 +7,7 @@ angular
     'ngSanitize',
     'ngRoute',
     'ui.bootstrap',
-    'costNg.directives'
+
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -31,16 +31,17 @@ angular
         templateUrl: 'views/inventory.html',
         controller: 'ItemsCtrl'
       })
+
         .when('/cart', {
         templateUrl: 'views/cart.html',
         controller: 'CartItemsCtrl'
       })
         .when('/cart/:id', {
-        templateUrl: 'views/cart-detail.html',
+        templateUrl: 'views/cart.html',
         controller: 'CartItemCtrl'
       })
         .when('/cart/:id/edit', {
-        templateUrl: 'views/cart-edit.html',
+        templateUrl: 'views/cart.html',
         controller: 'CartItemCtrl'
       })  
         .otherwise({
