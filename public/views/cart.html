@@ -10,9 +10,28 @@
 		</ul>
 	</div>
 	<div class="purchases">
-		<cost-directive></cost-directive>
-</div>
-<footer>
+<table class="table">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="item in items">
+            <td><input type="text" ng-model="item.type" class="input-small"></td>           
+            <td><input type="text" ng-model="item.name" class="input-small"></td>           
+            <td><input type="number" ng-model="item.qty" class="input-mini"></td>
+            <td><input type="number" ng-model="item.price" class="input-mini"></td>
+            <td>{{item.qty * item.price | currency | symbol}}</td>
+            <td>
+                [<a href ng-click="removeCartItem($index)"><strong>REMOVE</strong></a>]
+            </td>
+        </tr>
+    </table>
+	</div>
+	<footer>
 	<a ng-href="#/shop"><button class="btn btn-lg btn-success pull-right">Check Out</button></a> | <a ng-href="#/shop"><button class="btn btn-lg btn-success pull-right">More Shopping</button></a>
-</footer>
+	</footer>
 </div>

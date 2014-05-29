@@ -47,4 +47,4 @@ angular
         redirectTo: '/'
   });
 });
-angular.module('costNg.directives', []);
+
