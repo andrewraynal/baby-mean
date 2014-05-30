@@ -1,3 +1,13 @@
+<div class="nav">
+	<h1>Checkout</h1>
+		<ul class="nav nav-pills pull-right">
+    		<li><a ng-href="#">Home</a></li>
+    		<li><a ng-href="#/about">About</a></li>
+    		<li><a ng-href="#/shop">Shop</a></li>
+    		<li class="active"><a ng-href="#/cart">Shopping Cart</a></li>
+    		<li><a ng-href="#/contact">Contact</a></li>
+		</ul>
+	</div>
 <form name="newCartItem" >
 	<label type="text">New Product</label>
 	<input type="number" data-ng-model="cartitem.qty" placeholder="Qty">
@@ -8,7 +18,6 @@
 	<input type="text" data-ng-model="cartitem.smimg" value="{{cartitem.smimg}}" placeholder="Link to small image">
 	<input type="text" data-ng-model="cartitem.mdimg" value="{{cartitem.mdimg}}" placeholder="Link to med image">
 	<input type="text" data-ng-model="cartitem.lgimg" value="{{cartitem.lgimg}}" placeholder="Link to lg image">
-	<input type="number" data-ng-model="{{cartitem.extracosts}}" placeholder="Enter S&H">
 	<button class="btn-default btn-default-xs" data-ng-click="newCartItem(cartitem)">Add to Cart</button>
 	<a class="btn-default btn-default-xs" href="#/inventory">View Inventory</a>
 </form>
