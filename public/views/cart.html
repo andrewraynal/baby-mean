@@ -10,6 +10,53 @@
 		</ul>
 	</div>
 	<div class="purchases">
+		<table id="cart">
+        <thead>
+          <tr>
+            <th class="first">Photo</th>
+            <th class="second">Qty</th>
+            <th class="third">Product</th>
+            <th class="fourth">Line Total</th>
+            <th class="fifth"></th>
+          </tr>
+        </thead>
+        <tbody>
+  <!-- shopping cart contents -->
+  		<tr class="cartitem" ng-repeat="cartitem in cartitems">
+    		<td><img ng-src="{{cartitem.smimg}}" class="thumb"></td>
+    		<td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+    		<td>{{cartitem.name}}"></td>
+    		<td>{{cartitem.qty * cartitem.price | currency : symbol}}</td>
+   			<td><button class="btn-warning btn-warning-xs" ng-click="deleteCartItem()"><strong>REMOVE</strong></button></td>
+  		</tr>
+   <!-- tax + subtotal -->
+  		<tr class="extracosts">
+    		<td class="light">Shipping & Tax</td>
+    		<td colspan="2" class="light"></td>
+    		<td>{{cartitem.extracosts}}</td>
+    		<td></td>
+  		</tr>
+  		<tr class="totalprice">
+    		<td class="light">Total:</td>
+    		<td colspan="2"></td>
+    		<td colspan="2"><span class="thick">{{(cartitem.qty * cartitem.price) + cartitem.extracosts | currency}}</span></td>
+  		</tr>
+  
+  <!-- checkout btn -->
+  <tr class="checkoutrow">
+    <td colspan="5" class="checkout"><button id="submitbtn">Checkout Now</button></td>
+  </tr>
+</tbody>
+
+
+
+
+
+
+
+
+
+
 	<table class="table">
         <tr>
             <th>Type</th>

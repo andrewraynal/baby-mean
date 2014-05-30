@@ -3,9 +3,9 @@
 	    <h2>{{item.name}}</h2>
 	    <p>{{item.price}}</p>
 	    <p>{{item.description}}</p>
-	    <p><img ng-src="{{item.smimg}}"></p>
-	    <p><img ng-src="{{item.mdimg}}"></p>
-	    <p><img ng-src="{{item.lgimg}}"></p>
+	    <p>Small Image<img ng-src="{{item.smimg}}"></p>
+	    <p>Medium Image<img ng-src="{{item.mdimg}}"></p>
+	    <p>Large Image<img ng-src="{{item.lgimg}}"></p>
 		<p><a href="#/inventory/{{item._id}}/edit">Edit Product</a> | <a href="" ng-click="deleteItem()">Remove Product</a> | <a href="" ng-click="addItemToShop()">Add Product To Shop</a>
 		</p>
 	</article>
