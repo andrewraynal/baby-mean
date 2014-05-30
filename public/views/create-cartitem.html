@@ -1,12 +1,12 @@
-<form name="newInvItem" >
+<form name="newCartItem" >
 	<label type="text">New Product</label>
 	<input type="text" data-ng-model="cartitem.type" placeholder="Type"> 
 	<input type="text" data-ng-model="cartitem.name" placeholder="Name">
 	<input type="number" data-ng-model="cartitem.price" placeholder="Price">
 	<input type="text" data-ng-model="cartitem.description" placeholder="Enter a description...">
-	<input type="text" data-ng-model="cartitem.smimg" value="{{cartitem.smimg}}">
-	<input type="text" data-ng-model="cartitem.mdimg" value="{{cartitem.mdimg}}">
-	<input type="text" data-ng-model="cartitem.lgimg" value="{{cartitem.lgimg}}">
+	<input type="text" data-ng-model="cartitem.smimg" value="{{cartitem.smimg}}" placeholder="Link to small image">
+	<input type="text" data-ng-model="cartitem.mdimg" value="{{cartitem.mdimg}}" placeholder="Link to med image">
+	<input type="text" data-ng-model="cartitem.lgimg" value="{{cartitem.lgimg}}" placeholder="Link to lg image">
 	<input type="number" data-ng-model="{{cartitem.extracosts}}">
 	<button class="btn-default btn-default-xs" data-ng-click="newCartItem(item)">Add to Cart</button>
 	<a class="btn-default btn-default-xs" href="#/inventory">View Inventory</a>

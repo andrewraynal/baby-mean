@@ -13,7 +13,7 @@
 		<table id="cart">
         <thead>
           <tr>
-            <th class="first">Photo</th>
+            <th class="first">Sm Image</th>
             <th class="second">Qty</th>
             <th class="third">Product</th>
             <th class="fourth">Line Total</th>
@@ -23,7 +23,7 @@
         <tbody>
   <!-- shopping cart contents -->
   		<tr class="cartitem" ng-repeat="cartitem in cartitems">
-    		<td><img ng-src="{{cartitem.smimg}}" class="thumb"></td>
+    		<td><img ng-src="{{cartitem.smimg}}" class="smimg"></img></td>
     		<td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
     		<td>{{cartitem.name}}"></td>
     		<td>{{cartitem.qty * cartitem.price | currency : symbol}}</td>
@@ -45,7 +45,7 @@
   <!-- checkout btn -->
   <tr class="checkoutrow">
     <td colspan="5" class="checkout"><button id="submitbtn" ng-click="#/">Checkout Now</button></td>
-     <td colspan="5" class="checkout"><button ng-click="createCartItem()">Checkout Now</button></td>
+     <td colspan="5" class="checkout"><button ng-click="createCartItem()">Create Product for Cart (Temp)</button></td>
   </tr>
 </tbody>
 
