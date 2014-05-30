@@ -31,7 +31,7 @@ angular
         controller: 'ItemsCtrl'
       })
         .when('/newcartitem', {
-        templateUrl: 'views/cart.html',
+        templateUrl: 'views/create-cartitem.html',
         controller: 'CartItemsCtrl'
       })
         .when('/cart', {
