@@ -1,4 +1,5 @@
-.factory('ProductItemSvc', function($resource) {
+angular.module('angularstoreApp')
+	.factory('ProductItemSvc', function($resource) {
 		return $resource('api/collections/BoardShop/:id',
 	 		{
 	 			id: '@_id'
