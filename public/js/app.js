@@ -5,7 +5,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap'
 
   ])
   .config(function ($routeProvider) {
@@ -32,11 +33,11 @@ angular
       })
         .when('/shop', {
         templateUrl: 'views/shop.html',
-        controller: 'ProductsCtrl'
+        controller: 'ProductItemsCtrl'
       })
       .when('/shop/:id', {
         templateUrl: 'views/productitem-detail.html',
-        controller: 'ProductCtrl'
+        controller: 'ProductItemCtrl'
       })
       .when('/shop/:id/edit', {
         templateUrl: 'views/update-productitem.html',

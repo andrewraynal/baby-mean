@@ -28,10 +28,10 @@ angular.module('angularstoreApp')
       $location.path('/admin');
     };
     $scope.newProductItem = function(productitem) {
-      ProductsSvc.create(productitem)
+      ProductItemSvc.create(productitem)
       $location.path('/shop');
     };
-    $scope.productitems = ProductsSvc.query();
+    $scope.productitems = ProductItemsSvc.query();
   })
 
   .controller('ProductItemCtrl', function($scope, $location, $routeParams, ProductItemSvc) {
