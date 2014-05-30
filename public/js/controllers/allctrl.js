@@ -28,7 +28,7 @@ angular.module('angularstoreApp')
       $location.path('/newcartitem');
     };
     $scope.newCartItem = function(cartitem) {
-      CartItemsSvc.create(item);
+      CartItemsSvc.create(cartitem);
       $location.path('/cart');
     };
     $scope.cartitems = CartItemsSvc.query();
