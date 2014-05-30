@@ -43,7 +43,7 @@ ul.nav li:hover > ul {
 	height: 425px;
 }
 
-.lgimg{
+.lgimg, .lgimg1, .lgimg2, {
 	width: 700px;
 	height: 625px;
 }

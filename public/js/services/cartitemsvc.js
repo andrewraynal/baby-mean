@@ -5,9 +5,9 @@ angular.module('angularstoreApp')
 				id: '@_id'
 			},
 			{
-				showCartItem: { method: 'GET'		},
-				editCartItem: { method: 'PUT' 	},
-				deleteCartItem: { method: 'DELETE'	}
+				show: { method: 'GET'		},
+				edit: { method: 'PUT' 	},
+				delete: { method: 'DELETE'	}
 			});
 	});
 	

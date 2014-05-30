@@ -23,24 +23,53 @@ angular.module('angularstoreApp')
 			$location.path('/inventory');
 		};
 	})
-	.controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc) {
-    $scope.createCartItem = function() {
-      $location.path('/newcartitem');
+	.controller('ProductItemsCtrl', function ($scope, $location, ProductItemsSvc) {
+     $scope.createProductItem = function() {
+      $location.path('/admin');
     };
-    $scope.newCartItem = function(cartitem) {
-      CartItemsSvc.create(cartitem);
+    $scope.newProductItem = function(productitem) {
+      ProductsSvc.create(productitem)
+      $location.path('/shop');
+    };
+    $scope.productitems = ProductsSvc.query();
+  })
+
+  .controller('ProductItemCtrl', function($scope, $location, $routeParams, ProductItemSvc) {
+    $scope.productitem = ProductItemSvc.show({ id: $routeParams.id });
+    $scope.delete = function() { 
+      ProductItemSvc.delete({ id: $routeParams.id });
+      $location.path('/shop');
+    };
+    $scope.edit = function() {
+      ProductItemSvc.edit($scope.productitem);
+      $location.path('/shop');
+    };
+    $scope.toggle = function() {
+      $scope.isVisible = !$scope.isVisible;
+    };
+      $scope.isVisible = false;
+  })
+
+  .controller('CartItemsCtrl', function ($scope, $location, $routeParams, CartItemsSvc) {
+    $scope.addItem = function(productitem) {
+      $location.path('/shop');
+    };
+    $scope.newItem = function(productitem) {
+      CartItemsSvc.create(productitem);
       $location.path('/cart');
     };
-    $scope.cartitems = CartItemsSvc.query();
+    $scope.productitems = CartItemsSvc.query();
   })
-  .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc) {
-    $scope.cartitem = CartItemSvc.showCartItem({ id: $routeParams.id });
-    $scope.deleteCartItem = function() { 
+
+  .controller('CartItemCtrl', function($scope, $location, $routeParams, CartItemSvc) {
+    $scope.productitem = CartItemSvc.show({ id: $routeParams.id });
+    $scope.delete = function() { 
       CartItemSvc.delete({ id: $routeParams.id });
       $location.path('/cart');
     };
-    $scope.editCartItem = function() { 
-      CartItemSvc.editCartItem($scope.cartitem);
+    $scope.edit = function() {
+      CartItemSvc.edit($scope.productitem);
       $location.path('/cart');
     };
-  })
+  });
+ 

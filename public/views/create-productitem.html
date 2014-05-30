@@ -1,0 +1,23 @@
+<div class="nav">
+	<h1>Checkout</h1>
+		<ul class="nav nav-pills pull-right">
+    		<li><a ng-href="#">Home</a></li>
+    		<li><a ng-href="#/about">About</a></li>
+    		<li><a ng-href="#/shop">Shop</a></li>
+    		<li class="active"><a ng-href="#/cart">Shopping Cart</a></li>
+    		<li><a ng-href="#/contact">Contact</a></li>
+		</ul>
+	</div>
+<form name="newproductitem" >
+	<label type="text">New Product</label>
+	<input type="number" data-ng-model="productitem.qty" placeholder="Qty">
+	<input type="text" data-ng-model="productitem.type" placeholder="Type"> 
+	<input type="text" data-ng-model="productitem.name" placeholder="Name">
+	<input type="number" data-ng-model="productitem.price" placeholder="Price">
+	<input type="text" data-ng-model="productitem.description" placeholder="Enter a description...">
+	<input type="text" data-ng-model="productitem.smimg" value="{{productitem.smimg}}" placeholder="Link to small image">
+	<input type="text" data-ng-model="productitem.mdimg" value="{{productitem.mdimg}}" placeholder="Link to med image">
+	<input type="text" data-ng-model="productitem.lgimg" value="{{productitem.lgimg}}" placeholder="Link to lg image">
+	<button class="btn-default btn-default-xs" data-ng-click="newproductitem(productitem)">Add to Cart</button>
+	<a class="btn-default btn-default-xs" href="#/inventory">View Inventory</a>
+</form>

@@ -30,22 +30,26 @@ angular
         templateUrl: 'views/inventory.html',
         controller: 'ItemsCtrl'
       })
-        .when('/newcartitem', {
-        templateUrl: 'views/create-cartitem.html',
-        controller: 'CartItemsCtrl'
+        .when('/shop', {
+        templateUrl: 'views/shop.html',
+        controller: 'ProductsCtrl'
       })
-        .when('/cart', {
+      .when('/shop/:id', {
+        templateUrl: 'views/productitem-detail.html',
+        controller: 'ProductCtrl'
+      })
+      .when('/shop/:id/edit', {
+        templateUrl: 'views/update-productitem.html',
+        controller: 'ProductItemCtrl'
+      })
+      .when('/cart', {
         templateUrl: 'views/cart.html',
         controller: 'CartItemsCtrl'
       })
-        .when('/cart/:id', {
-        templateUrl: 'views/cart.html',
+      .when('/cart/:id/', {
+        templateUrl: 'views/update-cart.html',
         controller: 'CartItemCtrl'
       })
-        .when('/cart/:id/edit', {
-        templateUrl: 'views/cart.html',
-        controller: 'CartItemCtrl'
-      })  
         .otherwise({
         redirectTo: '/'
   });

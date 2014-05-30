@@ -1,0 +1,23 @@
+<h2>{{productitem.type}}</h2>
+<h3>{{productitem.name}} : {{productitem.price | currency: symbol}}</h3>
+      <p>{{productitem.description}}</p>
+      <p>{{productitem.lgimg}}</p>
+      <a href="#/shop/{{productitem._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
+    <div class='lgimg'><img ng-src="{{productitem.lgimg}}"></img></div>
+    <a ng-click="toggle()">See More</a> | <a ng-href="#/shop">Back to Shop</a>
+
+  <div class="imagecarousel" ng-show="isVisible">
+    <div>
+      <carousel interval='4000'>
+        <slide class="active">
+          <img ng-src="{{productitem.lgimg}}" style="margin:auto;">
+        </slide>
+        <slide>
+          <img ng-src="{{productitem.lgimg2}}" style="margin:auto;">
+        </slide>
+        <slide>
+          <img ng-src="{{productitem.lgimg3}}" style="margin:auto;">
+        </slide>
+      </carousel>
+    </div> 
+  </div>

@@ -5,8 +5,8 @@ angular.module('angularstoreApp')
 				id: '@_id'
 			},
 			{
-				showItem: { method: 'GET'		},
-				editItem: { method: 'PUT' 	},
-				deleteItem: { method: 'DELETE'	}
+				show: { method: 'GET'		},
+				edit: { method: 'PUT' 	},
+				delete: { method: 'DELETE'	}
 			});
 	});

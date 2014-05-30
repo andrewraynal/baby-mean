@@ -11,20 +11,20 @@
     </ul>
   </div>
 <div class="jumbotron">
-<button class="btn btn-xs btn-success createitembtn" ng-click="createCartItem()">Create New Product</button>
+<button class="btn btn-xs btn-success createitembtn" ng-click="create()">Create New Product</button>
   <h1>Shopping Cart</h1>
   <h2>Boards</h2>
-  <article class="newcartitem" data-ng-repeat="cartitem in cartitems">
-    <h3>{{cartitem.type}}</h3>
-    <h4>{{cartitem.name}}</h4>
-    <p>{{cartitem.qty}}</p>
-    <p>{{cartitem.price}}</p>
-    <p>{{cartitem.description}}</p>
-    <p><img ng-src="{{cartitem.smimg}}"></p>
-    <p><img ng-src="{{cartitem.mdimg}}"></p>
-    <p><img ng-src="{{cartitem.lgimg}}"></p>
-    <button ng-click="deleteCartItem()">Remove From Cart</button>
+  <article class="newproductitem" data-ng-repeat="productitem in productitems">
+    <h3>{{productitem.type}}</h3>
+    <h4>{{productitem.name}}</h4>
+    <p>{{productitem.qty}}</p>
+    <p>{{productitem.price}}</p>
+    <p>{{productitem.description}}</p>
+    <p><img ng-src="{{productitem.smimg}}"></p>
+    <p><img ng-src="{{productitem.mdimg}}"></p>
+    <p><img ng-src="{{productitem.lgimg}}"></p>
+    <button ng-click="delete()">Remove From Cart</button>
   </article>
-  <section>{{cartitem.price * cartitem.qty}}
+  <section>{{productitem.price * productitem.qty}}
   </section>
 </div>
