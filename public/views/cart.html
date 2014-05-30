@@ -1,79 +1,28 @@
-<div class="wrapper">
-	<div class="nav">
-	<h1>Checkout</h1>
-		<ul class="nav nav-pills pull-right">
-    		<li><a ng-href="#">Home</a></li>
-    		<li><a ng-href="#/about">About</a></li>
-    		<li><a ng-href="#/shop">Shop</a></li>
-    		<li class="active"><a ng-href="#/cart">Shopping Cart</a></li>
-    		<li><a ng-href="#/contact">Contact</a></li>
-		</ul>
-	</div>
-	<div class="purchases">
-		<table id="cart">
-        <thead>
-          <tr>
-            <th class="first">Sm Image</th>
-            <th class="second">Qty</th>
-            <th class="third">Product</th>
-            <th class="fourth">Line Total</th>
-            <th class="fifth"></th>
-          </tr>
-        </thead>
-        <tbody>
-  <!-- shopping cart contents -->
-  		<tr class="cartitem" ng-repeat="cartitem in cartitems">
-    		<td><img ng-src="{{cartitem.smimg}}" class="smimg"></img></td>
-    		<td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
-    		<td>{{cartitem.name}}"></td>
-    		<td>{{cartitem.qty * cartitem.price | currency : symbol}}</td>
-   			<td><button class="btn-warning btn-warning-xs" ng-click="deleteCartItem()"><strong>REMOVE</strong></button></td>
-  		</tr>
-   <!-- tax + subtotal -->
-  		<tr class="totalprice">
-    		<td class="light">Total</td>
-    		<td colspan="2"></td>
-    		<td colspan="2"><span class="thick">{{cartitem.qty * cartitem.price}}</span></td>
-  		</tr>
-  
-  <!-- checkout btn -->
-  <tr class="checkoutrow">
-    <td colspan="5" class="checkout"><button id="submitbtn" ng-click="/">Checkout Now</button></td>
-     <td colspan="5" class="checkout"><button ng-click="createCartItem()">Create Product for Cart (Temp)</button></td>
-  </tr>
-</tbody>
-
-
-
-
-
-
-
-
-
-
-	<table class="table">
-        <tr>
-            <th>Type</th>
-            <th>Name</th>
-            <th>Qty</th>
-            <th>Price</th>
-            <th>Total</th>
-            <th></th>
-        </tr>
-        <tr ng-repeat="cartitem in cartitems">
-            <td><input type="text" ng-model="cartitem.type" class="input-small"></td>           
-            <td><input type="text" ng-model="cartitem.name" class="input-small"></td>           
-            <td><input type="number" ng-model="cartitem.qty" class="input-mini"></td>
-            <td><input type="number" ng-model="cartitem.price" class="input-mini"></td>
-            <td>{{item.qty * item.price | currency : symbol}}</td>
-            <td>
-                <button class="btn-warning btn-warning-xs" ng-click="deleteCartItem()"><strong>REMOVE</strong></button>
-            </td>
-        </tr>
-    </table>
-	</div>
-	<footer>
-	<a class="btn btn-lg btn-success pull-right" ng-href="#/shop">Check Out</a> | <a class="btn btn-lg btn-success pull-right" ng-href="#/shop">More Shopping</a>
-	</footer>
+<div class="nav">
+  <h1>Checkout</h1>
+    <ul class="nav nav-pills pull-right">
+        <li><a ng-href="#">Home</a></li>
+        <li><a ng-href="#/about">About</a></li>
+        <li><a ng-href="#/shop">Shop</a></li>
+        <li class="active"><a ng-href="#/cart">Shopping Cart</a></li>
+        <li><a ng-href="#/contact">Contact</a></li>
+    </ul>
+  </div>
+<div class="jumbotron">
+<button class="btn btn-xs btn-success createitembtn" ng-click="createCartItem()">Create New Product</button>
+  <h1>Shopping Cart</h1>
+  <h2>Boards</h2>
+  <article class="newcartitem" data-ng-repeat="cartitem in cartitems">
+    <h3>{{cartitem.type}}</h3>
+    <h4>{{cartitem.name}}</h4>
+    <p>{{cartitem.qty}}</p>
+    <p>{{cartitem.price}}</p>
+    <p>{{cartitem.description}}</p>
+    <p><img ng-src="{{cartitem.smimg}}"></p>
+    <p><img ng-src="{{cartitem.mdimg}}"></p>
+    <p><img ng-src="{{cartitem.lgimg}}"></p>
+    <button ng-click="deleteCartItem()">Remove From Cart</button>
+  </article>
+  <section>{{cartitem.price * cartitem.qty}}
+  </section>
 </div>
