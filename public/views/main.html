@@ -1,11 +1,11 @@
 <h3 class="text-muted">Admin Only</h3>
-<div class="jumbotron">
+<div class="jumbotron" ng-controller="MainCtrl">
   <h1>The Board Shop</h1>
   <h2>Control Panel</h2>
   <p class="lead">
   <img src="images/home.jpeg" alt="I'm Board."><br>
   </p>
-  <div class="footer" ng-controller="DropdownCtrl">
+  <div class="footer">
   <ul class="nav nav-pills">
     <li> 
       <a class="btn btn-lg btn-success" ng-href="#/" ng-click="">Home</a> 
@@ -15,8 +15,9 @@
       <a href class="dropdown-toggle">
       </a>
       <ul class="dropdown-menu shop">
-        <li ng-repeat="choice in dropper">
-          <a href>{{choice}}</a>
+        <li>
+         <li><a href="#/newproductitem">Create shop product</a></li>
+          <li><a href="#/shop">View shop products</a></li>
         </li>
       </ul>
       </span> 
@@ -32,8 +33,9 @@
     <li class="inventory"> 
        <span class="dropdown inventory" on-toggle="toggled(open)">
       <ul class="dropdown-menu inventory">
-        <li ng-repeat="choice in dropper">
-          <a href>{{choice}}</a>
+        <li>
+         <li><a href="#/new">Create inventory item</a></li>
+          <li><a href="#/inventory">View inventory items</a></li>
         </li>
       </ul>
       </span> 
