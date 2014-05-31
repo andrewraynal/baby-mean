@@ -8,7 +8,8 @@ angular.module('angularstoreApp')
       'Karma'
     ];
 
-    $scope.dropper = [
+.controller('DropdownCtrl',function ($scope){
+  $scope.dropper = [
     'The first choice!',
     'And another choice for you.',
     'but wait! A third!'
