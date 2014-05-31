@@ -14,11 +14,11 @@ angular.module('angularstoreApp')
   })
 	.controller('ItemCtrl', function ($scope, $location, $routeParams, ItemSvc) {
 		$scope.item = ItemSvc.showItem({ id: $routeParams.id });
-		$scope.deleteItem = function() {
+		$scope.delete = function() {
 			ItemSvc.delete({ id: $routeParams.id });
 			$location.path('/inventory');
 		};
-		$scope.editItem = function() {
+		$scope.edit = function() {
 			ItemSvc.editItem($scope.item);
 			$location.path('/inventory');
 		};
@@ -43,7 +43,7 @@ angular.module('angularstoreApp')
     };
     $scope.edit = function() {
       ProductItemSvc.edit($scope.productitem);
-      $location.path('/shop');
+      $location.path('/shop/:id');
     };
     $scope.toggle = function() {
       $scope.isVisible = !$scope.isVisible;

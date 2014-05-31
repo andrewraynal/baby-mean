@@ -1,23 +1,26 @@
 
 <div class="nav">
-	<h1>Checkout</h1>
+	<h1>Create Inventory</h1>
 		<ul class="nav nav-pills pull-right">
     		<li><a ng-href="#">Home</a></li>
-    		<li><a ng-href="#/about">About</a></li>
     		<li><a ng-href="#/shop">Shop</a></li>
-    		<li class="active"><a ng-href="#/cart">Shopping Cart</a></li>
+    		<li><a ng-href="#/cart">Shopping Cart</a></li>
     		<li><a ng-href="#/contact">Contact</a></li>
+    		<li class="acitve"><a ng-href="#/inventory">Inventory</a></li>
 		</ul>
 	</div>
-<form name="newInvItem" >
+<form name="newInvItem">
 	<label type="text">New Product</label>
-	<input type="text" data-ng-model="item.type" placeholder="Type"> 
-	<input type="text" data-ng-model="item.name" placeholder="Name">
-	<input type="number" data-ng-model="item.price" placeholder="Price">
-	<input type="text" data-ng-model="item.description" placeholder="Enter a description...">
-	<input type="text" data-ng-model="item.smimg" value="{{item.smimg}}">
-	<input type="text" data-ng-model="item.mdimg" value="{{item.mdimg}}">
-	<input type="text" data-ng-model="item.lgimg" value="{{item.lgimg}}">
+	<textarea data-ng-model="item.type" placeholder="Type"></textarea>
+	<textarea data-ng-model="item.name" placeholder="Name"></textarea>
+	<input type="number" data-ng-model="item.price" placeholder="Price"></textarea>
+	<input type="number" data-ng-model="item.qty" placeholder="Qty"></textarea>
+	<textarea data-ng-model="item.description" placeholder="Enter a description..."></textarea>
+	<textarea data-ng-model="item.smimg" value="{{item.smimg}}" placeholder="Add small image"></textarea>
+	<textarea data-ng-model="item.mdimg" value="{{item.mdimg}}"
+	placeholder="Add medium image"></textarea>
+	<textarea data-ng-model="item.lgimg" value="{{item.lgimg}}"
+	placeholder="Add large image"></textarea>
 	<button class="btn-default btn-default-xs" data-ng-click="newItem(item)">Add Product to Inventory</button>
 	<a class="btn-default btn-default-xs" href="#/inventory">View Inventory</a>
 </form>
