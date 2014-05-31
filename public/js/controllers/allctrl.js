@@ -64,7 +64,7 @@ angular.module('angularstoreApp')
     };
       $scope.isVisible = false;
 //and one that follows is not visible by setting the "isVisible" to false
-  })
+})   
 
 
 

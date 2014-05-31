@@ -1,5 +1,5 @@
 <h3 class="text-muted">Admin Only</h3>
-<div class="jumbotron" ng-controller="MainCtrl">
+<div class="body" ng-controller="MainCtrl">
   <h1>The Board Shop</h1>
   <h2>Control Panel</h2>
   <p class="lead">
@@ -11,15 +11,6 @@
       <a class="btn btn-lg btn-success" ng-href="#/" ng-click="">Home</a> 
     </li>
     <li class="shop"> 
-      <span class="dropdown shop" on-toggle="toggled(open)">
-      <a href class="dropdown-toggle">
-      </a>
-      <ul class="dropdown-menu shop">
-        <li ng-repeat="choice in dropper">
-          <a href>{{choice}}</a>
-        </li>
-      </ul>
-      </span> 
       <div class="btn-group shop" dropdown is-open="status.isopen">
         <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">Shop Admin<span class="caret"></span>
         </button>
@@ -29,14 +20,7 @@
         </ul>
       </div>
     </li>
-    <li class="inventory"> 
-       <span class="dropdown inventory" on-toggle="toggled(open)">
-      <ul class="dropdown-menu inventory">
-        <li ng-repeat="choice in dropper">
-          <a href>{{choice}}</a>
-        </li>
-      </ul>
-      </span> 
+    <li class="inventory">  
       <div class="btn-group inventory" dropdown is-open="status.isopen">
         <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">Inventory Admin<span class="caret"></span>
         </button>
