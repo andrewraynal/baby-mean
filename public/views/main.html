@@ -1,27 +1,53 @@
-<h3 class="text-muted">I'm Board!</h3>
+<h3 class="text-muted">Admin Only</h3>
 <div class="jumbotron">
   <h1>The Board Shop</h1>
+  <h2>Control Panel</h2>
   <p class="lead">
   <img src="images/home.jpeg" alt="I'm Board."><br>
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/shop">Shop<span class="glyphicon glyphicon-ok"></span></a></p>
-
-  <div class="footer" ng-controller="MainCtrl">
+  <div class="footer" ng-controller="DropdownCtrl">
   <ul class="nav nav-pills">
-    <li ng-class="{active: nav.isSelected(0)}"> 
-      <a class="btn btn-lg btn-success" ng-href="#/" ng-click="nav.selectNav(0)">Home</a> 
+    <li> 
+      <a class="btn btn-lg btn-success" ng-href="#/" ng-click="">Home</a> 
     </li>
-    <li ng-class="{active: nav.isSelected(1)}"> 
-      <a class="btn btn-lg btn-success" ng-href="#/about" ng-click="nav.selectNav(1)">About</a> 
+    <li class="shop"> 
+      <span class="dropdown shop" on-toggle="toggled(open)">
+      <a href class="dropdown-toggle">
+      </a>
+      <ul class="dropdown-menu shop">
+        <li ng-repeat="choice in dropper">
+          <a href>{{choice}}</a>
+        </li>
+      </ul>
+      </span> 
+      <div class="btn-group shop" dropdown is-open="status.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled"><span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu shop" role="menu">
+          <li><a href="#/newproductitem">Create shop product</a></li>
+          <li><a href="#/shop">View shop products</a></li>
+        </ul>
+      </div>
     </li>
-    <li ng-class="{active: nav.isSelected(2)}"> 
-      <a class="btn btn-lg btn-success" ng-href="#/contact" ng-click="nav.selectNav(2)">Contact</a> 
-    </li>
-    <li ng-class="{active: nav.isSelected(3)}"> 
-      <a class="btn btn-lg btn-success" ng-href="#/cart" ng-click="nav.selectNav(3)">Cart</a> 
-    </li>
-    <li ng-class="{active: nav.isSelected(3)}"> 
-      <a class="btn btn-lg btn-success" ng-href="#/inventory" ng-click="nav.selectNav(4)">Inventory</a> 
+    <li class="inventory"> 
+       <span class="dropdown inventory" on-toggle="toggled(open)">
+      <a href class="dropdown-toggle">
+        Click me for a dropdown, yo!
+      </a>
+      <ul class="dropdown-menu inventory">
+        <li ng-repeat="choice in dropper">
+          <a href>{{choice}}</a>
+        </li>
+      </ul>
+      </span> 
+      <div class="btn-group inventory" dropdown is-open="status.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">INVENTORY ADMIN<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu inventory" role="menu">
+          <li><a href="#/new">Create inventory item</a></li>
+          <li><a href="#/inventory">View inventory items</a></li>
+        </ul>
+      </div>
     </li>
   </ul>
 </div>
