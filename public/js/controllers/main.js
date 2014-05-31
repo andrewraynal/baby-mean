@@ -29,6 +29,7 @@ angular.module('angularstoreApp')
       $scope.status.isopen = !$scope.status.isopen;
     };
   });
+})
  
 
   // create store front
