@@ -5,31 +5,20 @@
   <p class="lead">
   <img src="images/home.jpeg" alt="I'm Board."><br>
   </p>
-  <div class="footer">
-  <ul class="nav nav-pills">
-    <li> 
-      <a class="btn btn-lg btn-success" ng-href="#/" ng-click="">Home</a> 
-    </li>
-    <li class="shop"> 
-      <div class="btn-group shop" dropdown is-open="status.isopen">
-        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">Shop Admin<span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu shop" role="menu">
-          <li><a href="#/newproductitem">Create shop product</a></li>
-          <li><a href="#/shop">View shop products</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="inventory">  
-      <div class="btn-group inventory" dropdown is-open="status.isopen">
-        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">Inventory Admin<span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu inventory" role="menu">
-          <li><a href="#/new">Create inventory item</a></li>
-          <li><a href="#/inventory">View inventory items</a></li>
-        </ul>
-      </div>
-    </li>
+<div class="btn-group shop" dropdown is-open="status.isopen">
+  <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">Shop Admin<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu shop" role="menu">
+    <li><a href="#/newproductitem">Create shop product</a></li>
+    <li><a href="#/shop">View shop products</a></li>
+  </ul>
+</div> 
+<div class="btn-group inventory" dropdown is-open="status.isopen">
+  <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">Inventory Admin<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu inventory" role="menu">
+      <li><a href="#/new">Create inventory item</a></li>
+      <li><a href="#/inventory">View inventory items</a></li>      
   </ul>
 </div>
 </div>
