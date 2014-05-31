@@ -7,6 +7,13 @@ angular.module('angularstoreApp')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.dropper = [
+    'The first choice!',
+    'And another choice for you.',
+    'but wait! A third!'
+  ];
+
     $scope.status = {
     isopen: false
     };
