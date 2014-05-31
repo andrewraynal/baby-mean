@@ -1,7 +1,5 @@
-
-
 <div class="nav">
-  <h1>Checkout</h1>
+  <h1>SHOPPING CART</h1>
     <ul class="nav nav-pills pull-right">
         <li><a ng-href="#">Home</a></li>
         <li><a ng-href="#/about">About</a></li>
@@ -23,8 +21,9 @@
     <p><img ng-src="{{productitem.smimg}}"></p>
     <p><img ng-src="{{productitem.mdimg}}"></p>
     <p><img ng-src="{{productitem.lgimg}}"></p>
+    <button ng-click="edit()">Remove From Cart</button>
     <button ng-click="delete()">Remove From Cart</button>
   </article>
-  <section>{{productitem.price * productitem.qty}}
-  </section>
+  <article>Total = {{productitem.price * productitem.qty}}
+  </article>
 </div>

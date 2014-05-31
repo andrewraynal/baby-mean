@@ -35,6 +35,10 @@ angular
         templateUrl: 'views/shop.html',
         controller: 'ProductItemsCtrl'
       })
+        .when('newproductitem',{
+        templateUrl: 'views/create-productitem.html',
+        controller: 'ProductItemsCtrl'
+      })
       .when('/shop/:id', {
         templateUrl: 'views/productitem-detail.html',
         controller: 'ProductItemCtrl'
