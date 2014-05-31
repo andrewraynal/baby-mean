@@ -30,6 +30,7 @@ angular.module('angularstoreApp')
     $scope.newProductItem = function(productitem) {
       ProductItemSvc.create(productitem)
       $location.path('/shop');
+      alert("You have just added this item to your cart.");
     };
     $scope.productitems = ProductItemsSvc.query();
   })
