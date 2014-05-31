@@ -66,13 +66,12 @@ angular.module('angularstoreApp')
 //and one that follows is not visible by setting the "isVisible" to false
   })
 
-.controller('DropdownCtrl', function ($scope, $location){
+.controller('DropdownCtrl', function ($scope){
   
-  $scope.dropper = function()[{
-    $location.path('/newproductitem');
-    // create new product
-  },
-    $location.path('/shop');
+  $scope.dropper = [
+    'The first choice!',
+    'And another choice for you.',
+    'but wait! A third!'
   ];
 
   $scope.status = {
