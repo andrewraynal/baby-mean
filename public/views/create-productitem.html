@@ -1,23 +1,22 @@
-<div class="nav">
-<h1>Create New Product for Shop</h1>
-	<ul class="nav nav-pills pull-right">
-    	<li><a ng-href="#">Home</a></li>
-    	<li><a ng-href="#/shop">Shop</a></li>
-    	<li><a ng-href="#/cart">Shopping Cart</a></li>
-    	<li><a ng-href="#/contact">Contact</a></li>
-    	<li><a ng-href="#/inventory">Inventory</a></li>
-	</ul>
+
+<div class="wrapper">
+	<h1>Create Inventory</h1>
+		<ul class="nav nav-pills pull-right">
+    		<li><a ng-href="#">Back to Control Panel</a></li>
+		</ul>
 	</div>
 <form name="newproductitem">
 	<label type="text">New Product</label>
-	<input type="number" data-ng-model="productitem.qty" placeholder="Qty">
-	<input type="number" data-ng-model="productitem.price" placeholder="Price">
-	<textarea data-ng-model="productitem.type" placeholder="Type"></textarea> 
+	<textarea data-ng-model="productitem.type" placeholder="Type"></textarea>
 	<textarea data-ng-model="productitem.name" placeholder="Name"></textarea>
+	<input type="number" data-ng-model="productitem.price" placeholder="Price"></textarea>
+	<input type="number" data-ng-model="productitem.qty" placeholder="Qty"></textarea>
 	<textarea data-ng-model="productitem.description" placeholder="Enter a description..."></textarea>
-	<textarea data-ng-model="productitem.smimg" value="{{productitem.smimg}}" placeholder="Link to sl image"></textarea>
-	<textarea data-ng-model="productitem.mdimg" value="{{productitem.mdimg}}" placeholder="Link to md image"></textarea>
-	<textarea data-ng-model="productitem.lgimg" value="{{productitem.lgimg}}" placeholder="Link to lg image"></textarea>
-	<button class="btn-default btn-default-xs" data-ng-click="newProductItem(productitem)">Add to Shop</button>
-	<a class="btn-default btn-default-xs" href="#/cart">View Shop Products</a>
+	<textarea data-ng-model="productitem.smimg" value="{{productitem.smimg}}" placeholder="Add small image"></textarea>
+	<textarea data-ng-model="productitem.mdimg" value="{{productitem.mdimg}}"
+	placeholder="Add medium image"></textarea>
+	<textarea data-ng-model="productitem.lgimg" value="{{productitem.lgimg}}"
+	placeholder="Add large image"></textarea>
+	<button class="btn-default btn-default-xs" data-ng-click="newproductitem(productitem)">Create Shop Product</button>
+	<a class="btn-default btn-default-xs" href="#/shop">View Shop Products</a>
 </form>
