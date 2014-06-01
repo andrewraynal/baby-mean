@@ -4,7 +4,7 @@
 		<ul class="nav nav-pills pull-right">
     		<li><a ng-href="#">Back to Control Panel</a></li>
 		</ul>
-	</div>
+
 <form name="newproductitem">
 	<label type="text">New Product</label>
 	<textarea data-ng-model="productitem.type" placeholder="Type"></textarea>
@@ -17,6 +17,7 @@
 	placeholder="Add medium image"></textarea>
 	<textarea data-ng-model="productitem.lgimg" value="{{productitem.lgimg}}"
 	placeholder="Add large image"></textarea>
-	<button class="btn-default btn-default-xs" data-ng-click="newproductitem(productitem)">Create Shop Product</button>
+	<button class="btn-default btn-default-xs" data-ng-click="newProductItem(productitem)">Create Shop Product</button>
 	<a class="btn-default btn-default-xs" href="#/shop">View Shop Products</a>
 </form>
+</div>
