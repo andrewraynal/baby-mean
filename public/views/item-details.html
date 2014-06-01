@@ -1,11 +1,7 @@
 <div class="nav">
 <h1>Inventory Item</h1>
 	<ul class="nav nav-pills pull-right">
-    	<li><a ng-href="#">Home</a></li>
-    	<li><a ng-href="#/shop">Shop</a></li>
-    	<li><a ng-href="#/cart">Shopping Cart</a></li>
-    	<li><a ng-href="#/contact">Contact</a></li>
-    	<li class="active"><a ng-href="#/inventory">Inventory</a></li>
+    	<li><a ng-href="#">Back to Control Panel</a></li>
 	</ul>
 </div>
 <article>
@@ -17,6 +13,6 @@
 		<p>Small Image<img ng-src="{{item.smimg}}"></p>
 	    <p>Medium Image<img ng-src="{{item.mdimg}}"></p>
 	    <p>Large Image<img ng-src="{{item.lgimg}}"></p>
-		<p><a href="#/inventory/{{item._id}}/edit">Edit Product</a> | <a href="" ng-click="delete()">Remove Product</a> | <a href="" ng-click="addItemToShop()">Add Product To Shop</a>
+		<p><a href="#/inventory/{{item._id}}/edit">Edit Product</a> | <a href="" ng-click="delete()">Remove Product</a>
 		</p>
 </article>

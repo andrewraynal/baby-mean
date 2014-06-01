@@ -1,13 +1,8 @@
-<div class="nav">
+<div class="wrapper">
 <h1>Inventory</h1>
 	<ul class="nav nav-pills pull-right">
-    	<li><a ng-href="#">Home</a></li>
-    	<li><a ng-href="#/shop">Shop</a></li>
-    	<li><a ng-href="#/cart">Shopping Cart</a></li>
-    	<li><a ng-href="#/contact">Contact</a></li>
-    	<li class="active"><a ng-href="#/inventory">Inventory</a></li>
+    	<li><a ng-href="#">Back to Control Panel</a></li>
 	</ul>
-</div>
 <div name="existingInvItem">
 	<label type="text">Edit Inventory</label>
 	<textarea ng-model="item.type" value="{{item.type}}" placeholder="Type"></textarea> 
@@ -18,4 +13,5 @@
 	<input type="file" ng-model="item.images" ng-class="invimages" placeholder="Attach images">
 	<button class="btn-default btn-default-xs" ng-click="editItem()">Update Product</button>
 	<a class="btn-default btn-default-xs" href="#/inventory">View Inventory</a>
+</div>
 </div>

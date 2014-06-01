@@ -3,10 +3,10 @@
   <h1>The Board Shop</h1>
   <h2>Control Panel</h2>
   <p class="lead">
-  <img src="images/home.jpeg" alt="I'm Board."><br>
+  <img src="images/home.jpeg"><br>
   </p>
 <div class="btn-group shop">
-  <button type="button" class="btn btn-primary dropdown-toggle">Shop Admin<span class="caret"></span>
+  <button type="button" class="btn btn-primary dropdown-toggle" ng-click="toggleDropdown()">Shop Admin<span class="caret"></span>
   </button>
   <ul class="dropdown-menu shop" role="menu">
     <li><a href="#/newproductitem">Create shop product</a></li>
@@ -14,7 +14,7 @@
   </ul>
 </div> 
 <div class="btn-group inventory">
-  <button type="button" class="btn btn-primary dropdown-toggle">Inventory Admin<span class="caret"></span>
+  <button type="button" class="btn btn-primary dropdown-toggle" ng-click="toggleDropdown()">Inventory Admin<span class="caret"></span>
   </button>
   <ul class="dropdown-menu inventory" role="menu">
       <li><a href="#/new">Create inventory item</a></li>
