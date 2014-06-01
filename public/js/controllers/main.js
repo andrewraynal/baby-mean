@@ -2,11 +2,6 @@
 
 angular.module('angularstoreApp')
 .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-  ];
     $scope.status = {
     isopen: false
   };
@@ -15,7 +10,12 @@ angular.module('angularstoreApp')
     $event.stopPropagation();
     $scope.status.isopen = !$scope.status.isopen;
   };
-});
+     $scope.awesomeThings = [
+      'HTML5 Boilerplate',
+      'AngularJS',
+      'Karma'
+  ];
+})
  
 
   // create store front

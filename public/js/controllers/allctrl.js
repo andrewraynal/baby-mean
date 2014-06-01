@@ -19,7 +19,7 @@ angular.module('angularstoreApp')
 			$location.path('/inventory');
 		};
 		$scope.edit = function() {
-			ItemSvc.editItem($scope.item);
+			ItemSvc.edit($scope.item);
 			$location.path('/inventory');
 		};
 	})
