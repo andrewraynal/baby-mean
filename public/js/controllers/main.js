@@ -1,12 +1,10 @@
-'use strict';
-
-angular.module('angularstoreApp')
-.controller('MainCtrl', function ($scope) {
+angular.module('angularstoreApp');
+function MainCtrl($scope) {
    $scope.status = {
     isopen: false
   };
    
-})
+}
  
 
   // create store front

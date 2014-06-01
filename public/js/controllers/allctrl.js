@@ -1,5 +1,26 @@
 'use strict';
 
+angular.module('angularstoreApp');
+function MainCtrl($scope) {
+   $scope.status = {
+    isopen: false
+  };
+}
+function CarouselCtrl($scope) {
+  $scope.myInverval = 3000;
+   var slides = $scope.slides = [];
+  $scope.addSlide = function() {
+    slides.push({
+      image: 'images/',
+      text: ['More','Extra','Lots of','Surplus'][slides.length % 3] + ' ' +
+        ['Boards', 'Sun', 'Paddling', 'of Old Boards'][slides.length % 3]
+    });
+  };
+  for (var i=0; i<3; i++) {
+    $scope.addSlide();
+  }
+}
+
 angular.module('angularstoreApp')
 	.controller('ItemsCtrl', function ($scope, $location, ItemsSvc) {
     

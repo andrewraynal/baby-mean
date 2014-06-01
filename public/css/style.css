@@ -34,7 +34,13 @@ ul li a p body form div article section {
 	color: #9f9693;
 }
 
-.smimg{
+
+#myCarousel {
+  margin-top: 40px;
+}
+
+
+/*.smimg{
 	width: 300px;
 	height: 225px;
 }
@@ -47,4 +53,4 @@ ul li a p body form div article section {
 .lgimg, .lgimg1, .lgimg2, {
 	width: 700px;
 	height: 625px;
-}
+}*/
