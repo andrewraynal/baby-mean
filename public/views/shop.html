@@ -1,9 +1,8 @@
-<div class="nav">
+<div class="wrapper">
 	<h1>Shop Admin</h1>
 		<ul class="nav nav-pills pull-right">
     		<li><a ng-href="#">Back to Control Panel</a></li>
 		</ul>
-	</div>
 <a ng-href="#/cart"><button class="btn btn-lg btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
 	<section data-ng-repeat="productitem in productitems">
 		<ul class="shopfront">
@@ -11,10 +10,8 @@
 			<li>{{productitem.name}}</li>
 			<li><img ng-src="{{productitem.smimg}}"></img></li>
 			<li><p>{{productitem.price | currency: symbol}}</p></li>
-			<li><a href="#/shop/{{productitem._id}}">view more</a></li>
+			<li><a href="#/shop/{{productitem._id}}">View Product</a></li>
+		  	<li><button ng-click="newProductItem(productitem)" class="btn btn-sm btn-success">Add to Cart</button></li>
 		</ul>
-
-		<div>
-	        <button ng-click="newProductItem(productitem)" class="btn btn-sm btn-success">Add to Cart</button>
-	    </div>
 	</section>
+</div>

@@ -12,9 +12,9 @@
         </div>
       </slide>
     </carousel>
-    <button ng-click="addSlide()">Add Image for Product</button>
+    <button ng-click="addSlide(slide)">Add Image for Product</button>
   <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  <a class="carousel-control left" href="#myCarousel" ng-click="prev()">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" ng-click="next()">&rsaquo;</a>
 </div>
 

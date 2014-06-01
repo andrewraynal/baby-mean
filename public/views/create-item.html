@@ -7,16 +7,14 @@
 	</div>
 <form name="newInvItem">
 	<label type="text">New Product</label>
-	<textarea data-ng-model="item.type" placeholder="Type"></textarea>
-	<textarea data-ng-model="item.name" placeholder="Name"></textarea>
-	<input type="number" data-ng-model="item.price" placeholder="Price"></textarea>
-	<input type="number" data-ng-model="item.qty" placeholder="Qty"></textarea>
-	<textarea data-ng-model="item.description" placeholder="Enter a description..."></textarea>
-	<textarea data-ng-model="item.smimg" value="{{item.smimg}}" placeholder="Add small image"></textarea>
-	<textarea data-ng-model="item.mdimg" value="{{item.mdimg}}"
-	placeholder="Add medium image"></textarea>
-	<textarea data-ng-model="item.lgimg" value="{{item.lgimg}}"
-	placeholder="Add large image"></textarea>
-	<button class="btn-default btn-default-xs" data-ng-click="newItem(item)">Add Product to Inventory</button>
+	<textarea ng-model="item.type" placeholder="Type"></textarea>
+	<textarea ng-model="item.name" placeholder="Name"></textarea>
+	<input type="number" ng-model="item.price" placeholder="Price"></textarea>
+	<input type="number" ng-model="item.qty" placeholder="Qty"></textarea>
+	<textarea ng-model="item.description" placeholder="Enter a description..."></textarea>
+	<textarea ng-model="item.lgimg" value="{{item.lgimg}}" placeholder="Add lgimg"></textarea>
+	<textarea ng-model="item.lgimg1" value="{{item.lgimg1}}" placeholder="Add lgimg1"></textarea>
+	<textarea ng-model="item.lgimg2" value="{{item.lgimg2}}" placeholder="Add lg img2"></textarea>
+	<button class="btn-default btn-default-xs" ng-click="newItem(item)">Add Product to Inventory</button>
 	<a class="btn-default btn-default-xs" href="#/inventory">View Inventory</a>
 </form>
