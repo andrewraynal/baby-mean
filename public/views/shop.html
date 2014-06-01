@@ -10,6 +10,7 @@
 			<li><p>{{productitem.price | currency: symbol}}</p></li>
 			<li><a href="#/shop/{{productitem._id}}">View Product</a></li>
 		  	<li><button ng-click="newProductItem(productitem)" class="btn btn-sm btn-success">Add to Cart</button></li>
+		  	<li><button ng-click="delete()" class="btn btn-sm btn-success">Remove</button></li>
 		</ul>
 	</section>
 </div>

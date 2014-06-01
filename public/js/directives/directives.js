@@ -1,6 +1,6 @@
 angular.module('angularstoreApp.directives')
  	.directive('myDragger', ['$document', function($document) {
- 		return function{scope, element, attr){
+ 		return function (scope, element, attr) {
 		var startX = 0, startY = 0, x = 0, y = 0;
 
         element.css({
