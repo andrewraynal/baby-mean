@@ -14,12 +14,12 @@
     <p>{{productitem.qty}}</p>
     <p>{{productitem.price}}</p>
     <p>{{productitem.description}}</p>
-    <p><img ng-src="{{productitem.smimg}}"></p>
-    <p><img ng-src="{{productitem.mdimg}}"></p>
     <p><img ng-src="{{productitem.lgimg}}"></p>
-    <button ng-click="edit(productitem)">Remove From Cart</button>
-    <button ng-click="delete()">Remove From Cart</button>
+    <p><img ng-src="{{productitem.lgimg1}}"></p>
+    <p><img ng-src="{{productitem.lgimg2}}"></p>
+    <button ng-click="edit(productitem)">Update Cart</button>
+    <button ng-click="delete()">Remove</button>
   </article>
-  <article>Total = {{productitem.price * productitem.qty}}
-  </article>
+  <footer>TOTAL: {{productitem.price * productitem.qty | currency}}
+  </footer>
 </div>

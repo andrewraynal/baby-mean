@@ -59,4 +59,5 @@ angular
         redirectTo: '/'
   });
 });
+ angular.module('angularstoreApp.directives', []);
 
