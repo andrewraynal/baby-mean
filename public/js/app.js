@@ -40,7 +40,7 @@ angular
         controller: 'ProductItemsCtrl'
       })
       .when('/shop/:id', {
-        templateUrl: 'views/productitem-detail.html',
+        templateUrl: 'views/productitem-details.html',
         controller: 'ProductItemCtrl'
       })
       .when('/shop/:id/edit', {
