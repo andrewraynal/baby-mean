@@ -2,11 +2,6 @@
 
 angular.module('angularstoreApp')
 .controller('MainCtrl', function ($scope) {
-    $scope.toggleDropdown = function($event) {
-    $event.preventDefault();
-    $event.stopPropagation();
-    $scope.status.isopen = !$scope.status.isopen;
-  };
    $scope.status = {
     isopen: false
   };

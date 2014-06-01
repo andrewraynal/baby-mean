@@ -5,16 +5,16 @@
   <p class="lead">
   <img src="images/home.jpeg"><br>
   </p>
-<div class="btn-group shop">
-  <button type="button" class="btn btn-primary dropdown-toggle" ng-click="toggleDropdown()">Shop Admin<span class="caret"></span>
+<div class="btn-group shop" dropdown is-open="status.isopen">
+  <button type="button" class="btn btn-primary dropdown-toggle" ng-click="toggleDropdown()" ng-disabled="disabled">Shop Admin<span class="caret"></span>
   </button>
   <ul class="dropdown-menu shop" role="menu">
     <li><a href="#/newproductitem">Create shop product</a></li>
     <li><a href="#/shop">View shop products</a></li>
   </ul>
 </div> 
-<div class="btn-group inventory">
-  <button type="button" class="btn btn-primary dropdown-toggle" ng-click="toggleDropdown()">Inventory Admin<span class="caret"></span>
+<div class="btn-group inventory" dropdown is-open="status.isopen">
+  <button type="button" class="btn btn-primary dropdown-toggle" ng-click="toggleDropdown()" ng-disabled="disabled">Inventory Admin<span class="caret"></span>
   </button>
   <ul class="dropdown-menu inventory" role="menu">
       <li><a href="#/new">Create inventory item</a></li>
