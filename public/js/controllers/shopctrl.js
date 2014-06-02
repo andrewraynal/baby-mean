@@ -3,7 +3,7 @@
 angular.module('angularstoreApp')
 	.controller('ProductItemsCtrl', function ($scope, $location, ProductItemsSvc) {
      $scope.createProductItem = function() {
-      $location.path('/newproductitem');
+      $location.path('/newproduct');
     };
     $scope.newProductItem = function(productitem) {
       ProductItemSvc.create(productitem)
