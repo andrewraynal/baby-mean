@@ -6,7 +6,7 @@ angular.module('angularstoreApp')
       $location.path('/newproduct');
     };
     $scope.newProductItem = function(productitem) {
-      ProductItemSvc.create(productitem)
+      ProductItemsSvc.create(productitem)
       $location.path('/shop');
       alert("It's in your cart.  Please continue.");
     };
