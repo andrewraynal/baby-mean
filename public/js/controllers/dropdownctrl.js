@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularstoreApp')
+angular.module('angularstoreApp',['ui.bootstrap'])
   .controller('DropdownCtrl', function($scope) {
 
   $scope.status = {
