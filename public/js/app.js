@@ -13,7 +13,7 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'DrowdownCtrl'
       })
       .when('/new', {
         templateUrl: 'views/create-item.html',
@@ -46,14 +46,6 @@ angular
       .when('/shop/:id/edit', {
         templateUrl: 'views/update-productitem.html',
         controller: 'ProductItemCtrl'
-      })
-      .when('/cart', {
-        templateUrl: 'views/cart.html',
-        controller: 'CartItemsCtrl'
-      })
-      .when('/cart/:id/', {
-        templateUrl: 'views/update-cart.html',
-        controller: 'CartItemCtrl'
       })
         .otherwise({
         redirectTo: '/'

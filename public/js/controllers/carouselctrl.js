@@ -12,7 +12,6 @@ angular.module('angularstoreApp')
       text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
         ['Bill', 'Bill', 'Bills', 'of Bills'][slides.length % 4]
       });
-    };
     for (var i=0; i<4; i++) {
       $scope.addSlide();
     	}
