@@ -35,9 +35,9 @@ angular.module('angularstoreApp')
 			});
 	})
 	.factory('ProductItemSvc', function($resource) {
-		return $resource('api/collections/BoardShop/:id',
+		return $resource('api/collections/BoardShop/:prodid',
 	 		{
-	 			id: '@_id'
+	 			prodid: '@_id'
 	 		},
 			{
 				show: { method: 'GET'},
