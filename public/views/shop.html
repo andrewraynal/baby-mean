@@ -2,15 +2,14 @@
 	<h1>Shop Admin</h1>
 <span my-dragger><a ng-href="#">Back to Control Panel</a></span>
 <a ng-href="#/cart"><button class="btn btn-lg btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
-	<section data-ng-repeat="productitem in productitems">
-		<ul class="shopfront">
-			<li><h2>{{productitem.type}}</h2></li>
-			<li>{{productitem.name}}</li>
-			<li><img ng-src="{{productitem.smimg}}"></img></li>
-			<li><p>{{productitem.price | currency: symbol}}</p></li>
-			<li><a href="#/shop/{{productitem._id}}">View Product</a></li>
-		  	<li><button ng-click="newProductItem(productitem)" class="btn btn-sm btn-success">Add to Cart</button></li>
-		  	<li><button ng-click="delete()" class="btn btn-sm btn-success">Remove</button></li>
-		</ul>
-	</section>
+	<article class="newproduct" data-ng-repeat="productitem in productitems">
+    <h3>{{productitem.type}}</h3>
+    <h4>{{productitem.name}}</h4>
+    <p>{{productitem.price}}</p>
+    <p>{{productitem.description}}</p>
+    <p><img ng-src="{{productitem.smimg}}"></p>
+    <p><img ng-src="{{productitem.mdimg}}"></p>
+    <p><img ng-src="{{productitem.lgimg}}"></p>
+    <p><a href="#/shop/{{productitem._id}}">Update Product</a></p>
+  </article>
 </div>
