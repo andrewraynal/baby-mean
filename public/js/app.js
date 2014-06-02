@@ -13,7 +13,7 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'DrowdownCtrl'
+        controller: 'DropdownCtrl'
       })
       .when('/new', {
         templateUrl: 'views/create-item.html',
